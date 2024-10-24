@@ -10,18 +10,26 @@
     <div class="container">
         <h1>EH Language Project</h1>
         <p>Choose a section to continue:</p>
-        <button onclick="showSection('translator')">Translator</button>
-        <button onclick="showSection('testing')">Testing</button>
-        
-        <div id="translator" class="section" style="display: none;">
+        <button onclick="openModal('translatorModal')">Translator</button>
+        <button onclick="openModal('testingModal')">Testing</button>
+    </div>
+
+    <!-- Translator Modal -->
+    <div id="translatorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('translatorModal')">&times;</span>
             <h2>English to EH Language Translator</h2>
             <textarea id="inputText" placeholder="Enter English to translate"></textarea>
             <button onclick="translateText()">Translate</button>
             <div id="outputText"></div>
-            <button onclick="showSection('main')">Back to Main Menu</button>
+            <button onclick="closeModal('translatorModal')">Close</button>
         </div>
-        
-        <div id="testing" class="section" style="display: none;">
+    </div>
+
+    <!-- Testing Modal -->
+    <div id="testingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('testingModal')">&times;</span>
             <h2>EH Language Translation Test</h2>
             <div id="testArea">
                 <p id="wordToTranslate">Word will appear here...</p>
@@ -32,7 +40,7 @@
                 <p>Your Score: <span id="score">0</span>/5</p>
                 <button onclick="restartTest()">Restart Test</button>
             </div>
-            <button onclick="showSection('main')">Back to Main Menu</button>
+            <button onclick="closeModal('testingModal')">Close</button>
         </div>
     </div>
 
