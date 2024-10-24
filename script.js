@@ -44,14 +44,15 @@ let currentTranslation = '';
 let score = 0;
 let attempts = 0;
 
-function showSection(section) {
-    document.getElementById('translator').style.display = section === 'translator' ? 'block' : 'none';
-    document.getElementById('testing').style.display = section === 'testing' ? 'block' : 'none';
-    document.querySelectorAll('.section').forEach((sec) => {
-        if (sec.id !== section) {
-            sec.style.display = 'none';
-        }
-    });
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+    if (modalId === 'testingModal') {
+        loadNewWord(); // Load a new word for testing
+    }
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
 }
 
 function translateText() {
