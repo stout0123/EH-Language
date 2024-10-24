@@ -19,10 +19,10 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('translatorModal')">&times;</span>
             <h2>English to EH Language Translator</h2>
-            <textarea id="inputText" placeholder="Enter English to translate"></textarea>
+            <textarea id="inputText" placeholder="Enter English text..."></textarea>
             <button onclick="translateText()">Translate</button>
             <div id="outputText"></div>
-            <button onclick="closeModal('translatorModal')">Close</button>
+            <button class="close-btn" onclick="closeModal('translatorModal')">Close</button>
         </div>
     </div>
 
@@ -31,16 +31,12 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('testingModal')">&times;</span>
             <h2>EH Language Translation Test</h2>
-            <div id="testArea">
-                <p id="wordToTranslate">Word will appear here...</p>
-                <input type="text" id="userAnswer" placeholder="Translate the word into EH Language">
-                <button onclick="submitAnswer()">Submit</button>
-            </div>
-            <div id="scoreArea" style="display: none;">
-                <p>Your Score: <span id="score">0</span>/5</p>
-                <button onclick="restartTest()">Restart Test</button>
-            </div>
-            <button onclick="closeModal('testingModal')">Close</button>
+            <p id="wordToTranslate">Word will appear here...</p>
+            <input type="text" id="userAnswer" placeholder="Translate the word...">
+            <button onclick="submitAnswer()">Submit</button>
+            <p>Your Score: <span id="score">0</span>/5</p>
+            <button onclick="restartTest()">Restart Test</button>
+            <button class="close-btn" onclick="closeModal('testingModal')">Close</button>
         </div>
     </div>
 
