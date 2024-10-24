@@ -12,16 +12,15 @@
         <p>Choose a section to continue:</p>
         <button onclick="showSection('translator')">Translator</button>
         <button onclick="showSection('testing')">Testing</button>
-
-        <!-- Translator Section -->
+        
         <div id="translator" class="section" style="display: none;">
             <h2>English to EH Language Translator</h2>
             <textarea id="inputText" placeholder="Enter English to translate"></textarea>
             <button onclick="translateText()">Translate</button>
             <div id="outputText"></div>
+            <button onclick="showSection('main')">Back to Main Menu</button>
         </div>
-
-        <!-- Testing Section -->
+        
         <div id="testing" class="section" style="display: none;">
             <h2>EH Language Translation Test</h2>
             <div id="testArea">
@@ -29,11 +28,11 @@
                 <input type="text" id="userAnswer" placeholder="Translate the word into EH Language">
                 <button onclick="submitAnswer()">Submit</button>
             </div>
-
             <div id="scoreArea" style="display: none;">
                 <p>Your Score: <span id="score">0</span>/5</p>
                 <button onclick="restartTest()">Restart Test</button>
             </div>
+            <button onclick="showSection('main')">Back to Main Menu</button>
         </div>
     </div>
 
