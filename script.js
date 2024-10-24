@@ -47,6 +47,11 @@ let attempts = 0;
 function showSection(section) {
     document.getElementById('translator').style.display = section === 'translator' ? 'block' : 'none';
     document.getElementById('testing').style.display = section === 'testing' ? 'block' : 'none';
+    document.querySelectorAll('.section').forEach((sec) => {
+        if (sec.id !== section) {
+            sec.style.display = 'none';
+        }
+    });
 }
 
 function translateText() {
