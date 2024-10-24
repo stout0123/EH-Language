@@ -16,14 +16,17 @@ body {
     text-align: center;
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 20px;
 }
 
-button {
+button, input, textarea {
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
+}
+
+button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -33,4 +36,27 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#outputText {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
+
+#scoreArea {
+    display: none;
 }
